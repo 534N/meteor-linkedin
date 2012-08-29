@@ -1,0 +1,46 @@
+<head>
+  	<title>Ratio is LinkedIn</title>
+  	<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+	  api_key: 1bex9ek1c57a
+	  authorize: true
+	  onLoad: onLinkedInLoad
+	</script>
+	<script type="text/javascript" src="linkedin-api-handlers.js"></script>
+	<script src="https://raw.github.com/LeaVerou/prefixfree/master/prefixfree.min.js"></script>
+</head>
+
+<body>
+  	{{> app}}
+
+  	{{> team}}
+</body>
+
+<template name="app">
+
+  	<div class="page home">
+  		<div class="linkedin-message">
+  			<script type="in/Login">
+				User <?js= firstName ?> <?js= lastName ?> is signed in.
+			</script>
+  		</div>
+  	</div>
+  	
+</template>
+
+<template name="team">
+	<div class="team-list">
+		{{#each team}}
+			{{> teammate}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="teammate">
+	<li class="teammate">
+		<img class="profile thumb" src="{{pictureUrl}}"/>
+		<h3>{{firstName}} {{lastName}}</h3>
+		<p>{{headline}}</p>
+	</li>
+</template>
+
+

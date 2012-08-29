@@ -1,0 +1,31 @@
+/* CSS declarations go here */
+* {
+    position:relative;
+    background-repeat:no-repeat;
+    box-sizing:border-box;
+}
+
+body {
+    font-family:sans-serif; 
+    margin:0;
+    padding:0;
+}
+
+a:link, a:visited, a:hover, a:active { color:#222; text-decoration: none; }
+
+img {
+    border: 0;
+    max-width:100%;
+    -ms-interpolation-mode: bicubic;
+}
+
+.teammate {
+	display:block;
+	float:left;
+	width:100px;
+	padding: 20px;
+}
+
+.profile {
+	text-align:center;
+}
